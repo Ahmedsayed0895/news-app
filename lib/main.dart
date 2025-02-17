@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newsapp/news_screen.dart';
 
 void main() {
   runApp(const News());
@@ -10,7 +11,11 @@ class News extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(),
+      debugShowCheckedModeBanner: false,
+      routes: {
+        NewsScreen.route: (context) => NewsScreen(),
+      },
+      initialRoute: NewsScreen.route,
     );
   }
 }
